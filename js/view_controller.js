@@ -36,7 +36,7 @@
         function getInput() { return parseInt( field.value ); }
 
     // 4b. Trigger-Input
-        field.addEventListener( "input", isInputValid );
+        field.addEventListener( "input", isInputValid );        // true or false
 
     // 4c. Check auf korrekte Eingaben ...
         function isInputValid() {
@@ -45,8 +45,8 @@
             let cond = patt.test( inputStr );
 
             if ( !cond ) {
-                field.value = "FEHLER";
-                updateImg( data.default.bev );
+                field.value = "";
+                updateImg( data.default.bev );  // tee
             }
 
             return cond;
