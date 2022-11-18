@@ -19,7 +19,8 @@
         btn.addEventListener( "click", actOnClick );
 
     // 5b. Event-Dispatcher
-        function actOnClick() {
+        function actOnClick( event ) {
+
             if ( isInputValid() ) {
                 controller();
             } else {
