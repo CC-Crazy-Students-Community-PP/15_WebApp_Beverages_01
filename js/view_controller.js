@@ -19,12 +19,11 @@
         btn.addEventListener( "click", actOnClick );
 
     // 5b. Event-Dispatcher
-        function actOnClick( event ) {
-
+        function actOnClick() {
             if ( isInputValid() ) {
                 controller();
             } else {
-                output( "Input nicht korrekt!" )
+                output( "Input nicht korrekt!" );
             }
         }
 
@@ -46,10 +45,10 @@
             let cond = patt.test( inputStr );
 
             if ( !cond ) {
-                field.value = "";
+                field.value = "FEHLER";
                 updateImg( data.default.bev );
             }
-        
+
             return cond;
         }
 
